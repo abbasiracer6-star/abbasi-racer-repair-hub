@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11131a">
+<meta name="description" content="Abbasi Racer Mobile Repair Hub — mobile hardware schematics library and repair reference workspace.">
+<title>Abbasi Racer | Mobile Repair Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brandmark">AR</div><div class="topbrand"><b>ABBASI RACER</b><span>MOBILE REPAIR HUB</span></div>
+  <div class="top-actions"><span class="status-dot"></span><span>LOCAL WORKSPACE</span><button id="themeBtn" title="Toggle theme">◐</button></div>
+</header>
+<div class="hero-strip"><span>ABBASI RACER</span><strong>SCHEMATICS &amp; HARDWARE SOLUTIONS</strong><span class="hero-tag">REPAIR • TRACE • LEARN</span></div>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-heading">DEVICE LIBRARY <span id="brandCount">10 BRANDS</span></div>
+    <label class="searchbox"><span>⌕</span><input id="brandSearch" placeholder="Search brand or model..." autocomplete="off"></label>
+    <div id="brandTree" class="brand-tree"></div>
+    <div class="side-note">Add your own authorized schematic PDFs with the upload button in the viewer.</div>
+  </aside>
+  <main class="main">
+    <section class="profile-card">
+      <img src="assets/abbasi-racer-photo.jpg" alt="Abbasi Racer profile artwork">
+      <div class="profile-copy"><small>WELCOME TO THE WORKBENCH</small><h1>ABBASI RACER</h1><p>Mobile Hardware • Schematics • Troubleshooting</p><div class="profile-pills"><span>DEVICE LIBRARY</span><span>FAULT GUIDES</span><span>PDF VIEWER</span></div></div>
+      <div class="profile-monogram">AR</div>
+    </section>
+    <section class="stats">
+      <div><span>BRANDS</span><b id="statBrands">10</b></div><div><span>FAULT CATEGORIES</span><b>12</b></div><div><span>SCHEMATIC FILES</span><b id="fileCount">0</b></div><div><span>WORKSPACE</span><b class="green">READY</b></div>
+    </section>
+    <section class="toolbar">
+      <div><small>SCHEMATIC WORKSPACE</small><h2 id="workspaceTitle">Select a device to begin</h2></div>
+      <label class="upload-btn">＋ Add schematic PDF<input type="file" id="pdfUpload" accept="application/pdf" multiple hidden></label>
+    </section>
+    <section class="viewer">
+      <div class="viewer-top"><div id="fileTab" class="file-tab">◧ No schematic selected</div><div class="viewer-controls"><button id="zoomOut">−</button><span id="zoomLabel">100%</span><button id="zoomIn">＋</button><button id="resetView">Reset</button></div></div>
+      <div class="viewer-content" id="viewerContent">
+        <div class="board-placeholder">
+          <div class="board-head"><span>DEVICE BOARD VIEW</span><span class="orange">TOP / BOTTOM</span></div>
+          <div class="board-art"><div class="chip chip-a">CPU</div><div class="chip chip-b">PMIC</div><div class="chip chip-c">RF</div><div class="chip chip-d">UFS</div><div class="trace trace1"></div><div class="trace trace2"></div><div class="trace trace3"></div><div class="trace trace4"></div><div class="pad p1"></div><div class="pad p2"></div><div class="pad p3"></div><div class="pad p4"></div><div class="pad p5"></div><div class="pad p6"></div></div>
+          <h3 id="emptyTitle">Your repair workspace is ready</h3>
+          <p id="emptyText">Choose a brand and device on the left, or add a schematic PDF you have permission to use.</p>
+          <div class="notice">DEMO BOARD ART — not an electrical schematic. Real circuit paths require the correct model's genuine diagram.</div>
+        </div>
+      </div>
+      <div class="viewer-bottom"><span>● Viewer ready</span><span>Files you upload here stay in this browser session; refresh clears the list.</span></div>
+    </section>
+    <section class="lower-grid">
+      <div class="panel"><div class="panel-title">HARDWARE FAULT FINDER <span>12 TOPICS</span></div><div id="faultGrid" class="fault-grid"></div></div>
+      <div class="panel"><div class="panel-title">QUICK REPAIR NOTES</div><div class="notes"><p><b>01 / Confirm exact model</b><br>Match model code and board revision before following a schematic.</p><p><b>02 / Check safely</b><br>Disconnect power before resistance/continuity checks; avoid bridging unknown pads.</p><p><b>03 / Use verified files</b><br>Do not treat the demo board illustration as real pinout or circuit data.</p></div></div>
+    </section>
+    <footer>© <span id="year"></span> ABBASI RACER · MOBILE REPAIR HUB <span>Independent repair reference workspace</span></footer>
+  </main>
+</div>
+<script src="app.js"></script>
+</body></html>
